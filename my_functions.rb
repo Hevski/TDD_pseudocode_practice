@@ -18,9 +18,26 @@ def pigify(sentence)
 	# Capitalize first letter of first word
 	# return sentence
 	return amended_words.join(" ").capitalize()
-
 end
-#
+
+def reduce_number(number_to_reduce)
+	while number_to_reduce >= 10
+		# Turn number_to_reduce in to string
+		# turn strings in to array
+		numbers_to_string_array = number_to_reduce.to_s().chars()
+
+		new_number = 0
+
+		#convert strings back in to integers
+		for number in numbers_to_string_array
+			new_number += number.to_i()
+		end
+		# Return new number to reduce
+		return number_to_reduce = new_number
+	end
+end
+
+
 def reduce_number(number)
   while number >= 10
 		sum = 0
@@ -29,33 +46,9 @@ def reduce_number(number)
   end
 end
 
-# def reduce_number(number_to_reduce)
-# 	count = 0
-#   begin
-# 		number_to_reduce.to_s.chars { |char| count += char.to_i }
-#   end until number_to_reduce >= 10
-# 	count
-# end
-#
-#
 
 
-# def reduce_number(number_to_reduce)
-# 	while number_to_reduce >= 10
-# 		# Turn number_to_reduce in to string
-# 		# turn strings in to array
-# 		numbers_to_string_array = number_to_reduce.to_s().chars()
-#
-# 		new_number = 0
-#
-# 		#convert strings back in to integers
-# 		for number in numbers_to_string_array
-# 			new_number += number.to_i()
-# 		end
-# 		# Return new number to reduce
-# 		return number_to_reduce = new_number
-# 	end
-# end
+
 
 def order_total(order)
 	book_order_total_cost = 0
